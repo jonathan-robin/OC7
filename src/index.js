@@ -11,12 +11,13 @@ import {
 import Root from './routes/root';
 import NotFound from './scenes/notFound/notFound';
 import About from './scenes/About/about';
+import Home from './scenes/Home/home';
 
 
 const router = createBrowserRouter([ 
   {
     path: "/", 
-    element: <Root />,
+    element: <Home />,
     errorElement: <NotFound />,
   }, 
   { 
