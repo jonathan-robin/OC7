@@ -1,0 +1,19 @@
+.container__card{ 
+    /* width: 30%;
+    height: 50%; */
+    padding: 2rem;
+    width: 28%;
+}
+.container__card-image{ 
+    background-position: center;
+    background-size: 100%;
+    width: 100%;
+    height: 300px
+}   
+
+.card-image{ 
+
+}
+.container__card-title{ 
+
+}

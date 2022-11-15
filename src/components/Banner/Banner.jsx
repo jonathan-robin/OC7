@@ -1,4 +1,6 @@
 
+import './banner.css';
+
 export default function Banner(props){ 
     return (
         <div className="container__banner">

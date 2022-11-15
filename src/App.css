@@ -7,3 +7,18 @@
   --border-rounded: 10px;
 }
 
+
+.container__cards{ 
+  margin: 5rem;
+  border-radius: var(--border-rounded);
+  background-color:rgba(128, 128, 128, 0.172);
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  height: calc(40vh - 10px);
+  grid-template-rows: auto auto 1fr 1fr 1fr auto auto; */
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  /* width: 100%; */
+}
