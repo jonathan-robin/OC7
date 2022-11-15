@@ -1,0 +1,24 @@
+.container__footer{ 
+    width: 100%;
+    background-color:black;
+    position: absolute; 
+    bottom: 0;
+    /* padding: 2rem; */
+}
+.container__footer-logo svg{ 
+    margin: auto;
+    width: 100%;
+    padding-top: 2rem;
+}
+.container__footer-copyright{ 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    line-height: 142.6%;
+}
+.container__footer-copyright p{ 
+    align-items: flex-end;
+    text-align: center; 
+}
