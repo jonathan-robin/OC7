@@ -2,16 +2,13 @@
 .header__container{
     display: flex;
     flex-direction: row;
-    padding: 2rem;
-
-}
-
-.container__logo{ 
-    width: 70%;
+    padding: 2rem 0;
 }
 
 .container__nav{ 
-    width: 30%;
+    float: right;
+    width: 100%;
+    margin: auto;
 }
 
 .nav--list{ 
@@ -19,13 +16,13 @@
     text-decoration: none;
     display: flex;
     flex-direction: row;
-    height: 100%;
+    padding: 0 !important;
+    justify-content: flex-end;
 }
 
 .nav--item{
-    width: 30%;
     text-decoration: none;
-    margin: auto auto auto 0;
+    margin-left: 4rem;
  }
 
  a{ 
