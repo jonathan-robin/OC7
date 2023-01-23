@@ -20,7 +20,7 @@ export default function Header(props){
                         <a href={`/`}>Accueil</a>
                     </li>
                     <li id="link-about" className="nav--item">
-                        <a href={`about`}>A propos</a>
+                        <a href={`/about`}>A propos</a>
                     </li>
                 </ul>
             </div>
