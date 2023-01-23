@@ -1,3 +1,51 @@
 .description__collapse{ 
    display: none;
 }
+
+.container__collapse{ 
+    padding-top: 2rem;
+   color:white; 
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 142.6%;
+}
+
+.main__collapse{ 
+    background-color: #FF6060;
+    max-width: 1023px;
+    padding: 0.2em;
+    max-height: 47px; 
+    border-radius: 5px;
+    display: flex;
+    cursor:pointer;
+    margin: auto;
+}
+
+.title__collapse{ 
+    width: 12%;
+    position:relative;
+    padding-left: 2%;
+}
+
+p{ margin: 0;}
+
+.arrow__collapse{ 
+    left: 80%;
+    position: relative;
+    padding-bottom: 8px;
+    transform: rotate(-180deg);
+}
+
+.description__collapse{ 
+    background: #F7F7F7;
+    border-radius: 5px;
+    max-width: 1023px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.description__collapse-text{ 
+    padding: 1em;
+    color: #FF6060;
+}
