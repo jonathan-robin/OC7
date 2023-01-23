@@ -1,0 +1,4 @@
+.wrapper-collapse{ width: 48%;}
+.container__collapses{ display: flex;flex-direction: row; 
+    justify-content:space-between;
+}

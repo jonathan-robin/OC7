@@ -12,9 +12,9 @@ export default function About(){
                 <Header />
                 <Banner path="banner_about.png" alt="bannière pour la page about" />
                 {Object.entries(about).map(([key, value]) => {
-                    console.log({key})
-                    console.log({value})
-                    return <Collapse title={value.title} description={value.description} id={value.key} key={value.key}/>
+                    return <div className="collpase-wrapper">
+                                <Collapse title={value.title} description={value.description} id={value.key} key={value.key}/>
+                        </div>
                 })}
             </div>
             <Footer />

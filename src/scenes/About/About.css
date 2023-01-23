@@ -2,3 +2,9 @@
     max-width: 80%;
     margin: auto;
 }
+
+
+.collpase-wrapper{ 
+    width: 1023px !important;
+    margin: auto;
+}

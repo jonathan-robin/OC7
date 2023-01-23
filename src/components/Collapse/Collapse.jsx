@@ -27,8 +27,8 @@ export default function Collapse(props){
                 </svg>
             </div>
             <div className="description__collapse" id={props.id}>
-                    <p className="description__collapse-text">{ props.description }</p>
-                </div>
+                 <p className="description__collapse-text css-fix">{ props.description }</p>
+            </div>
         </div>
     )
 }
