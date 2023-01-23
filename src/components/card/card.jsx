@@ -1,10 +1,14 @@
-import { render } from "@testing-library/react";
 import './Card.css';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Card(props){ 
 
+    let navigation = useNavigate();
+
     function handleOnClickCard(){ 
-        console.log(props.id);
+        console.log(props);
+        navigation('/fiche-logement/'+props.id, {state: props})
     }
 
     return (
