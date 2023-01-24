@@ -5,6 +5,8 @@ import { useLocation } from 'react-router-dom';
 import HeaderLogement from '../../components/headerLogement/HeaderLogement';
 import Collapse from '../../components/Collapse/Collapse';
 
+// import json et récupérer props en mappant
+// si id existe pas renvoit une 404
 export default function FicheLogement(){
     
     const location = useLocation(); 

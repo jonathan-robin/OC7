@@ -20,7 +20,7 @@ export default function HeaderLogement(props){
                     <h5>{props.location}</h5>
                     <div className="container__tags">
                         {props.tags.map(tag => { 
-                            return <span className="tags">{tag}</span>
+                            return <span key={tag} className="tags">{tag}</span>
                         })}
                     </div>
                 </div>

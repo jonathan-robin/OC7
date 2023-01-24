@@ -34,12 +34,13 @@ export default function Carousel(props){
     }
 
     return (
-        <div className="container__carousel">
-            {hasManyPictures && props.props.pictures.map((picture, index) => { 
-                return <div className="container__picture" key={index} style={{background: 'url("'+picture+'")'}}></div>
-            })}
-            <div onClick={() => { handleClickPrev() }} className="btn btn-prev">&#60;</div>
-            <div onClick={() => { handleClickNext() }} className="btn btn-next">&#62;</div>
-        </div>
+            <div className="container__carousel">
+                {hasManyPictures && props.props.pictures.map((picture, index) => { 
+                    return <div className="container__picture" key={index} style={{background: 'url("'+picture+'")'}}></div>
+                })}
+                {/* hide arrow when only one picture */}
+                <div onClick={() => { handleClickPrev() }} className="btn btn-prev">&#60;</div>
+                <div onClick={() => { handleClickNext() }} className="btn btn-next">&#62;</div>
+            </div>
     )
 }

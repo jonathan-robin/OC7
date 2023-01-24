@@ -11,12 +11,3 @@
 }
 
 
-.container__cards{ 
-   margin-top:3em;
-  border-radius: var(--border-rounded);
-  background-color:rgba(128, 128, 128, 0.172);
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  justify-content: center ;
-}

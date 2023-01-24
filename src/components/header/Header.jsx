@@ -16,12 +16,8 @@ export default function Header(props){
             </div>
             <div className="container__nav">
                 <ul className="nav--list">
-                    <li id="link-home" className="nav--item">
-                        <a href={`/`}>Accueil</a>
-                    </li>
-                    <li id="link-about" className="nav--item">
-                        <a href={`/about`}>A propos</a>
-                    </li>
+                    <li id="link-home" className="nav--item"><a href={`/`}>Accueil</a></li>
+                    <li id="link-about" className="nav--item"><a href={`/about`}>A Propos</a></li>
                 </ul>
             </div>
         </div>

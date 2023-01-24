@@ -14,7 +14,7 @@ export default function About(){
                 {Object.entries(about).map(([key, value]) => {
                     return <div className="collpase-wrapper">
                                 <Collapse title={value.title} description={value.description} id={value.key} key={value.key}/>
-                        </div>
+                            </div>
                 })}
             </div>
             <Footer />
