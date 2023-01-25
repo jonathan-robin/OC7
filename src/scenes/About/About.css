@@ -1,17 +1,5 @@
-.container__about{ 
-    max-width: 1240px;
-    margin: auto;
-    min-height: 100vh;
-}
+.container__about{ max-width: 1240px;margin: auto;min-height: 100vh;}
+.collpase-wrapper{  width: 1023px;margin: auto; }
 
-.collpase-wrapper{  
-   width: 1023px !important;
-   margin: auto; 
-}
-
-@media only screen and (max-width: 1420px) {
-    .collpase-wrapper{  
-        width: 80% !important;
-        margin: auto; 
-     }
-   }
+@media only screen and (max-width: 1420px) { .collpase-wrapper{  width: 80%;margin: auto; } }
+@media only screen and (max-width: 738px) { .collpase-wrapper{  margin: 0;width: 100%; } }

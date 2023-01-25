@@ -18,8 +18,8 @@
 .container__stars svg{ margin-right: 10px; }
 
 .container__header-firstLine h2{ 
-    font-weight: 500 !important;
-    font-size: 36px !important;
+    font-weight: 500;
+    font-size: 36px;
 }
 
 .container__header-firstLine h5{ 
@@ -42,8 +42,8 @@
     border-radius:50%;
 }
 
-.right{ float: right; width: 20%;}
-.left{ width: 100%;}
+.right{ float: right; width: 40%;}
+.left{ width: 60%;}
 
 .right h4{
     display: flex;
@@ -51,7 +51,7 @@
     width: 150px;
     word-spacing:150px;
     padding-right:10px;
-    margin: auto !important;
+    margin: auto 0 auto auto !important;
 }
 .container__tags{ margin-top: 20px !important; display: flex;}
 .tags{ 
@@ -84,3 +84,19 @@
 }
 
 .left *, .right *{ margin: 0; }
+
+
+@media only screen and (max-width: 738px) {
+    .container__header-firstLine{ flex-direction: column;}
+    .left, .right{ width: 100%;}
+    .right{ flex-direction: row; display: flex; padding-top: 18px;}
+    .container__stars{ order: 1; width: 100%; display: flex;}
+    .author-props{float: right;order:2;display: flex;}
+    .container__header-firstLine h2{ font-size: 18px ; }
+    .container__header-firstLine h5{ font-size: 14px ; }
+    .container__tags .tags{ font-size: 10px; padding: 0 5px; height: 20px;}
+    .author-props h4{ font-weight: 500; font-size: 12px; line-height: 142.6%;}
+    .author-picture{ min-width: 60px; min-height: 60px;}
+    .right h4{ width: 60px; word-spacing:60px; }
+}
+

@@ -30,12 +30,5 @@
     color: white;
   }
   
-  .btn-prev {
-    top: 35%;
-    left: 5%;
-  }
-  
-  .btn-next {
-    top: 35%;
-    right: 5%;
-  }
+  .btn-prev {top: 35%;left: 5%;}
+  .btn-next {top: 35%;right: 5%;}

@@ -24,3 +24,8 @@
     text-align: center; 
 }
 
+
+
+@media only screen and (max-width: 1420px) {
+    .container__footer-copyright{ font-size: 14px;}
+}

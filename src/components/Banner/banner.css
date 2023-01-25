@@ -35,11 +35,9 @@
     .text-over-img{ font-size:36px }
 }
 @media (max-width: 738px){ 
-    /* custom css for home banner */
     .container__banner.banner-home{ height: 111px;}
-    .banner-home .text-over-img{ font-size: 24px; max-width: 50%; padding-left: 1rem; line-height: 100%;}
+    .banner-home .text-over-img{ font-size: 24px !important; max-width: 50%; padding-left: 1rem; line-height: 100%;}
     .banner-home.container__banner img{width: 100% ;height: 70% ;min-width: 335px; min-height: 111px; }
-
     .container__banner img{ border-radius: 10px;}
     .background-banner{ border-radius: 10px;}
 }

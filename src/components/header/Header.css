@@ -40,4 +40,7 @@ a:hover, .active{ text-decoration: underline; }
     .nav--list{ height: 100%; text-align: center; align-items: center; margin:  0 !important;}
     .container__logo svg{ width: 40px; margin-top: 5px;}
     .container__logo .fix-svg{width: 35px;}
+    .header__container{ padding: 28px 0 18px 0;}
+
+
 }

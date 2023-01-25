@@ -26,16 +26,7 @@
 }
 
 @media only screen and (max-width: 738px) {
-    .container__card{
-        padding-top: 22px;
-        min-width: 335px;
-        min-height: 255px;
-        max-width: 100%;
-    }
-    .container__card-image{ 
-        min-width: 335px;
-        width: 100%;
-        padding-top: 0;
-     }
+    .container__card{ padding-top: 22px; min-width: 335px;min-height: 255px;max-width: 100%; }
+    .container__card-image{ min-width: 335px; width: 100%; padding-top: 0; }
  }
  

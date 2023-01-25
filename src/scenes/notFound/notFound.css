@@ -1,22 +1,10 @@
-.container__error{ 
-    text-align: center;
-    color: var(--color-primary);
-}
-h1{ 
-    font-family:'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 288px;
-    line-height: 142.6%;
-    margin: 0;
-}
-h3{ 
-    font-weight: 500;
-    font-size: 36px;
-    margin-bottom: 182px;
-    margin-top: 0;
-}
-.container__error p{ 
-    text-decoration: underline;
-    font-size: 18px;
-}
+.container__error{ text-align: center; color: var(--color-primary); }
+h1{ font-family:'Montserrat', sans-serif; font-style: normal; font-weight: 700; font-size: 288px; line-height: 142.6%; margin: 0; }
+h3{ font-weight: 500; font-size: 36px; margin-bottom: 182px; margin-top: 0; }
+.container__error p{ text-decoration: underline; font-size: 18px; }
+
+@media only screen and (max-width: 738px) {
+    .container__error h1{ font-weight: 700; font-size: 96px; line-height: 142.6%; margin-top: 195px; }
+    .container__error h3{ font-weight: 500; font-style: normal; font-size: 18px; line-height: 142.6%; margin-bottom: 133px;}
+    .container__error a { font-weight: 500; font-size: 14px; line-height: 142.6%; }
+ }
