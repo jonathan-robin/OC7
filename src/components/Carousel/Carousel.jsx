@@ -19,7 +19,7 @@ export default function Carousel(props){
         if (curSlide === maxSlide) curSlide = 0;
         else curSlide++; 
         var arr = [].slice.call(slides);
-        arr.forEach((slide, indx) => {
+        arr.reverse().forEach((slide, indx) => {
             slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
         });
     }
@@ -28,7 +28,7 @@ export default function Carousel(props){
         if (curSlide === 0) curSlide = maxSlide;
         else curSlide--; 
         var arr = [].slice.call(slides);
-        arr.forEach((slide, indx) => {
+        arr.reverse().forEach((slide, indx) => {
             slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
         });
     }
@@ -38,9 +38,13 @@ export default function Carousel(props){
                 {hasManyPictures && props.props.pictures.map((picture, index) => { 
                     return <div className="container__picture" key={index} style={{background: 'url("'+picture+'")'}}></div>
                 })}
-                {/* hide arrow when only one picture */}
-                <div onClick={() => { handleClickPrev() }} className="btn btn-prev">&#60;</div>
-                <div onClick={() => { handleClickNext() }} className="btn btn-next">&#62;</div>
+                {hasManyPictures &&            
+                <div> 
+                    <div onClick={handleClickPrev} className="btn btn-prev">&#60;</div>
+                    <div onClick={handleClickNext} className="btn btn-next">&#62;</div>
+                </div>
+                }
+     
             </div>
     )
 }
