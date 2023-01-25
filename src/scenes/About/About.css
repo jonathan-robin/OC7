@@ -8,3 +8,10 @@
    width: 1023px !important;
    margin: auto; 
 }
+
+@media only screen and (max-width: 1420px) {
+    .collpase-wrapper{  
+        width: 80% !important;
+        margin: auto; 
+     }
+   }

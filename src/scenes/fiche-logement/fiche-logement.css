@@ -10,3 +10,7 @@
     flex-direction: row; 
     justify-content:space-between;
 }
+
+@media only screen and (max-width: 1420px) {
+    .wrapper-collapse{ width: 48%;}
+   }

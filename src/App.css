@@ -13,3 +13,9 @@
 }
 
 
+/* breakpiont 1420px */
+
+@media only screen and (max-width: 1420px) {
+    .container{ width: 80%; }
+}
+

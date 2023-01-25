@@ -24,5 +24,13 @@ a{
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
+    min-width: 124px;
 }
 a:hover, .active{ text-decoration: underline; }
+.container__logo{display: flex; flex-direction: row; }
+.container__logo svg.fix-svg{ margin: 15px 0 0 12px;}
+
+@media only screen and (max-width: 1420px) {
+    .container__nav{ width:fit-content;}
+
+}
