@@ -1,11 +1,9 @@
 .container__error{ 
-    max-width: 80%;
-    margin: auto;
     text-align: center;
-    color: #FF6060;
+    color: var(--color-primary);
 }
 h1{ 
-    font-family: 'Montserrat', sans-serif;
+    font-family:'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 288px;
@@ -15,7 +13,7 @@ h1{
 h3{ 
     font-weight: 500;
     font-size: 36px;
-    margin-bottom: 8rem;
+    margin-bottom: 182px;
     margin-top: 0;
 }
 .container__error p{ 

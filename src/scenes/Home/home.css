@@ -1,5 +1,10 @@
-.container__home{
-   max-width: 1240px;
-   margin: auto;
-   padding-bottom:4em;
+.container__cards{ 
+   margin-top:3em;
+   border-radius: var(--border-rounded);
+   background-color:#f7f7f7;
+   padding-bottom: 56px;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   justify-content: space-evenly;
 }

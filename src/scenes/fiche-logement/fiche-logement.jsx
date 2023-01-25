@@ -14,7 +14,7 @@ export default function FicheLogement(){
 
     return (
         <div className="">
-            <div className="container__about">
+            <div className="container">
                 <Header />
                 <Carousel props={location.state}/>
                 <HeaderLogement author={location.state.host} title={location.state.title} rating={location.state.rating} location={location.state.location} tags={location.state.tags}/>

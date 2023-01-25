@@ -24,14 +24,5 @@
     align-items: flex-end;
     display: flex;
 }
-.container__cards{ 
-    margin-top:3em;
-    border-radius: var(--border-rounded);
-    background-color:#f7f7f7;
-    padding-bottom: 56px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-evenly;
- }
+
  

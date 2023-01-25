@@ -1,13 +1,15 @@
 :root { 
   --bg-linear: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  --bg-card:#FF6060;
-
   --color-primary: #FF6060;
 
   --border-rounded: 25px;
   --border-rounded-m : 10px;
+}
 
-  /* margin-bottom: 8rem; */
+.container{
+    max-width: 1240px;
+    margin: auto;
+    min-height: 100vh;
 }
 
 

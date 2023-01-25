@@ -8,12 +8,12 @@ import './About.css';
 export default function About(){ 
     return (
         <div className="">
-            <div className="container__about">
+            <div className="container">
                 <Header />
-                <Banner path="banner_about.png" alt="bannière pour la page about" />
+                <Banner path="banner_about.png" sentence={false} alt="bannière pour la page about" />
                 {Object.entries(about).map(([key, value]) => {
-                    return <div className="collpase-wrapper">
-                                <Collapse title={value.title} description={value.description} id={value.key} key={value.key}/>
+                    return <div className="collpase-wrapper" key={value.key}>
+                                <Collapse title={value.title} description={value.description} id={value.key}/>
                             </div>
                 })}
             </div>

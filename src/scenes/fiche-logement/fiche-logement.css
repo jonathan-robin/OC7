@@ -1,3 +1,9 @@
+.container__fiche-logement{ 
+    margin-bottom: 4em !important;
+    max-width: 1240px;
+    margin: auto;
+    min-height: 100vh;
+}
 .wrapper-collapse{ width: 582px;}
 .container__collapses{ 
     display: flex;

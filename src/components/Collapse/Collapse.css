@@ -1,6 +1,4 @@
-.description__collapse{ 
-   display: none;
-}
+.description__collapse{ display: none; }
 
 .container__collapse{ 
     padding-top: 31px;
@@ -51,8 +49,7 @@
     line-height: 142.6%;
     display: flex;
     align-items: center;
-
-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 p{ margin: 0;}
@@ -68,7 +65,6 @@ p{ margin: 0;}
     background: #F7F7F7;
     border-radius: 5px;
     width: 100%;
-    /* max-width: 1023px; */
     margin: auto;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;

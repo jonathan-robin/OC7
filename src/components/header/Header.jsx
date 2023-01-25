@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { NavLink } from "react-router-dom";
 import './Header.css';
 
 export default function Header(props){ 
@@ -16,8 +16,8 @@ export default function Header(props){
             </div>
             <div className="container__nav">
                 <ul className="nav--list">
-                    <li id="link-home" className="nav--item"><a href={`/`}>Accueil</a></li>
-                    <li id="link-about" className="nav--item"><a href={`/about`}>A Propos</a></li>
+                    <NavLink  id="link-home" className="nav--item"  to="/">Accueil</NavLink>
+                    <NavLink id="link-about" className="nav--item"  to="/about">About</NavLink>
                 </ul>
             </div>
         </div>

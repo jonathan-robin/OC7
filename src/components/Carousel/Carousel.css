@@ -1,16 +1,17 @@
 
 .container__carousel{ 
-    height: 450px;
+    height: 415px;
     overflow: hidden !important;
     width: 100%;
     display: flex;
     flex-direction: row;
     position: relative;
+    border-radius: 25px;
 }
 
   .container__picture {
-    width: 100% !important;
-    height: 450px;
+    width: 100%;
+    height: 100%;
     transition: all 0.5s;
     position: absolute;
     background-position: center !important;
