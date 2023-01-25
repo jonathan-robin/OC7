@@ -20,6 +20,10 @@ const router = createBrowserRouter([
       path: "/fiche-logement/:id", 
       element: <FicheLogement />,
       errorElement: <NotFound />
+    },
+    { 
+      path: "/error", 
+      element: <NotFound />,
     }
   ])
 

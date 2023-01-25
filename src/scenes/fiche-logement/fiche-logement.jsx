@@ -1,32 +1,41 @@
 import Header from '../../components/header/Header';
 import './fiche-logement.css';
 import Carousel from '../../components/Carousel/Carousel';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import HeaderLogement from '../../components/headerLogement/HeaderLogement';
 import Collapse from '../../components/Collapse/Collapse';
 import Footer from '../../components/footer/Footer';
+import jsonLogement from '../../json/logements.json';
 
-// import json et récupérer props en mappant
-// si id existe pas renvoit une 404
 export default function FicheLogement(){
     
     const location = useLocation(); 
+    const navigate = useNavigate();
+    const [id, setId] = useState(location.pathname.split('/')[2]); 
+    const [logement, setLogement] = useState(jsonLogement.filter(logement => logement.id === id)[0]);
+
+    useEffect(() => { 
+        return () => logement ? {} : navigate('/error');
+    },[logement])
 
     return (
         <div className="">
+            {logement &&  
             <div className="container">
                 <Header />
-                <Carousel props={location.state}/>
-                <HeaderLogement author={location.state.host} title={location.state.title} rating={location.state.rating} location={location.state.location} tags={location.state.tags}/>
+                <Carousel props={logement}/>
+                <HeaderLogement author={logement.host} title={logement.title} rating={logement.rating} location={logement.location} tags={logement.tags}/>
                 <div className="container__collapses">
                     <div className="wrapper-collapse">
-                        <Collapse title="Description" description={location.state.description} id={"description"+location.state.id} key={"description"+location.state.id}/>
+                        <Collapse title="Description" description={logement.description} id={"description"+logement.id} key={"description"+logement.id}/>
                     </div>
                     <div className="wrapper-collapse">
-                        <Collapse title="Equipements" description={location.state.equipments.map(equi => equi+'\n')} id={location.state.id} key={location.state.id}/>
+                        <Collapse title="Equipements" description={logement.equipments.map(equi => equi+'\n')} id={logement.id} key={logement.id}/>
                     </div>
                 </div>
             </div>
+            }
             <Footer />
         </div>
     )
