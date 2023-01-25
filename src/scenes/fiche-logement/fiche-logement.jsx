@@ -4,6 +4,7 @@ import Carousel from '../../components/Carousel/Carousel';
 import { useLocation } from 'react-router-dom';
 import HeaderLogement from '../../components/headerLogement/HeaderLogement';
 import Collapse from '../../components/Collapse/Collapse';
+import Footer from '../../components/footer/Footer';
 
 // import json et récupérer props en mappant
 // si id existe pas renvoit une 404
