@@ -1,7 +1,7 @@
 import './Card.css';
 import { useNavigate } from 'react-router-dom';
 
-
+// TODO : navigation via react-router-dom
 export default function Card(props){ 
 
     let navigation = useNavigate();
@@ -12,10 +12,8 @@ export default function Card(props){
 
     return (
         <div className="container__card" onClick={handleOnClickCard}>
+            <div className="container__card-title"><p>{props.title}</p></div>
             <div className="container__card-image" style={{background: 'url("'+props.cover+'")'}}></div>
-            <div className="container__card-title">
-                <p>{props.title}</p>
-            </div>
         </div>
     )
 

@@ -1,16 +1,9 @@
 
-import React, {useEffect } from 'react';
+import React from 'react';
 import './HeaderLogement.css';
-
 
 // Function for the About page that displays title + description
 export default function HeaderLogement(props){ 
-
-    console.log(props);
-
-        useEffect(() => { 
-            console.log(props);
-        },[])
 
     return(
          <div className="container__header">

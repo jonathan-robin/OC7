@@ -1,4 +1,6 @@
-.wrapper-collapse{ width: 48%;}
-.container__collapses{ display: flex;flex-direction: row; 
+.wrapper-collapse{ width: 582px;}
+.container__collapses{ 
+    display: flex;
+    flex-direction: row; 
     justify-content:space-between;
 }

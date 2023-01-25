@@ -1,10 +1,10 @@
 .container__about{ 
-    max-width: 80%;
+    max-width: 1240px;
     margin: auto;
+    min-height: 100vh;
 }
 
-
-.collpase-wrapper{ 
-    width: 1023px !important;
-    margin: auto;
+.collpase-wrapper{  
+   width: 1023px !important;
+   margin: auto; 
 }

@@ -26,6 +26,7 @@ export default function FicheLogement(){
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
