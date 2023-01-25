@@ -10,17 +10,9 @@
     padding-top: 30px;
 }
 
-.container__stars{ 
-    text-align: right;
-    margin: 0.5rem 0 !important;
-}
-
+.container__stars{ text-align: right; margin: 0.5rem 0 !important; }
 .container__stars svg{ margin-right: 10px; }
-
-.container__header-firstLine h2{ 
-    font-weight: 500;
-    font-size: 36px;
-}
+.container__header-firstLine h2{ font-weight: 500; font-size: 36px; }
 
 .container__header-firstLine h5{ 
     font-weight: 500 !important;

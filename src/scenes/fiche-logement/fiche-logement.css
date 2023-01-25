@@ -12,3 +12,7 @@
 }
 
 @media only screen and (max-width: 1420px) { .wrapper-collapse{ width: 48%;} }
+@media only screen and (max-width: 738px) { .container__collapses{ flex-direction: column;}  .wrapper-collapse{ width: 100%;} .main__collapse{ margin: 0 !important; padding: 0 !important; height: 30px;}
+    .wrapper-collapse .main__collapse{ margin: 0; padding: 0;}
+    .collpase-wrapper .arrow__collapse{ left: 75%; }
+}

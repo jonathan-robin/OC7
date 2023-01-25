@@ -32,3 +32,12 @@
   
   .btn-prev {top: 35%;left: 5%;}
   .btn-next {top: 35%;right: 5%;}
+
+
+  @media only screen and (max-width: 738px) {
+     .container__carousel{ height: 255px;}
+     .container__picture, .container__carousel{ border-radius: var(--border-rounded-m);}
+     .btn{font-size: 30px; width: 0; height: 0;}
+     .btn-prev { top: 40%; left: 3%; }
+      .btn-next { top: 40%; right: 8%; }
+  }

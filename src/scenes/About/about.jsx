@@ -10,7 +10,7 @@ export default function About(){
         <div className="">
             <div className="container">
                 <Header />
-                <Banner customClass="banner-about" path="banner_about.png" sentence={false} alt="bannière pour la page about" />
+                <Banner customClass="banner-about" path="banner_about.png" sentence={false} alt="bannière pour la page about " />
                 {Object.entries(about).map(([key, value]) => {
                     return <div className="collpase-wrapper" key={value.key}>
                                 <Collapse title={value.title} description={value.description} id={value.key}/>
