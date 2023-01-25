@@ -19,3 +19,7 @@
     .container{ width: 80%; }
 }
 
+@media (max-width: 738px){ 
+  .container{ padding: 0 20px; width: auto;}
+}
+

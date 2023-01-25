@@ -12,7 +12,7 @@ return (
     <div>
         <div className="container">
             <Header />
-            <Banner path='bannerhome.png' sentence="Chez vous, partout et ailleurs" alt="bannière pour la page accueil d'un paysage côtier brumeux"/>
+            <Banner customClass="banner-home" path='bannerhome.png' sentence="Chez vous, partout et ailleurs" alt="bannière pour la page accueil d'un paysage côtier brumeux"/>
             <div className="container__cards">
                 {jsonLogement.map(logement => { 
                     return <Card 
