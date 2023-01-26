@@ -3,15 +3,15 @@ import './Carousel.css';
 import React, {useCallback, useEffect, useState} from 'react';
 
 // Function for the About page that displays title + description
-export default function Carousel({pictures, logement, carouselLoading = () => {}}){ 
+export default function Carousel({ pictures }){ 
 
-    const [hasManyPictures, setHasManyPictures] = useState(pictures.length > 1 ? true : false)
+    let hasManyPictures = pictures.length > 1 ? true : false;
     let curSlide = 0;
-    const [maxSlide, setMaxSlide] = useState(pictures.length - 1);
+    let maxSlide = pictures.length - 1
     const [nbPictureLoaded, setNbPictureLoaded] = useState(0);
 
     useEffect(() => {
-        if ((nbPictureLoaded === pictures.length) && nbPictureLoaded > 0){ 
+        if (nbPictureLoaded === pictures.length && nbPictureLoaded > 0){ 
             document.querySelector(".lds-dual-ring").style.display = 'none';
             [].slice.call(document.getElementsByClassName('container__picture')).forEach(el => el.style.display = 'block');
         }
@@ -21,23 +21,17 @@ export default function Carousel({pictures, logement, carouselLoading = () => {}
         if (curSlide === maxSlide) curSlide = 0;
         else curSlide++; 
         var arr = [].slice.call(document.getElementsByClassName("container__picture"));
-        arr.reverse().forEach((slide, indx) => {
-            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        });
+        arr.reverse().forEach((slide, indx) => slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` );
     }
 
     function handleClickPrev(){ 
         if (curSlide === 0) curSlide = maxSlide;
         else curSlide--; 
         var arr = [].slice.call(document.getElementsByClassName("container__picture"));
-        arr.reverse().forEach((slide, indx) => {
-            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        });
+        arr.reverse().forEach((slide, indx) => slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` );
     }
 
-    function pictureLoaded(){ 
-        setNbPictureLoaded(nbPictureLoaded+1);
-    }
+    const pictureLoaded = () =>  setNbPictureLoaded(nbPictureLoaded+1);
 
     return (
             <div className="container__carousel">

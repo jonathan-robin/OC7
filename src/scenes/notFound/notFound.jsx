@@ -1,11 +1,8 @@
-import { useRouteError } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import './notFound.css';
 
 export default function NotFound() {
-  const error = useRouteError();
-
   return (
     <div>
       <div className="container">

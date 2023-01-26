@@ -1,14 +1,9 @@
 import './Card.css';
 import { useNavigate } from 'react-router-dom';
 
-// TODO : navigation via react-router-dom
 export default function Card(props){ 
-
     let navigation = useNavigate();
-
-    function handleOnClickCard(){ 
-        navigation('/fiche-logement/'+props.id, {state: props})
-    }
+    const handleOnClickCard = () =>  navigation('/fiche-logement/'+props.id)
 
     return (
         <div className="container__card" onClick={handleOnClickCard}>

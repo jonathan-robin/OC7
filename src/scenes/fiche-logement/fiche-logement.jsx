@@ -13,19 +13,20 @@ export default function FicheLogement(){
     const location = useLocation(); 
     const navigate = useNavigate();
     const [id, setId] = useState(location.pathname.split('/')[2]); 
-    const [pictures, setPictures] = useState(jsonLogement.filter(logement => logement.id === id)[0].pictures);
+    const [pictures, setPictures] = useState(jsonLogement.filter(logement => logement.id === id)[0]?.pictures);
     const [logement, setLogement] = useState(jsonLogement.filter(logement => logement.id === id)[0]);
 
     useEffect(() => { 
-        return () => logement ? {} : navigate('/error');
+
+        return () => logement ? () => {} : navigate('/error');
     },[logement])
 
     return (
-        <div className="">
+        <div>
             {logement &&
             <div className="container">
                 <Header />
-                <Carousel logement={logement} pictures={pictures} />
+                <Carousel pictures={pictures} />
                 <HeaderLogement author={logement.host} title={logement.title} rating={logement.rating} location={logement.location} tags={logement.tags}/>
                 <div className="container__collapses">
                     <div className="wrapper-collapse">
@@ -36,7 +37,7 @@ export default function FicheLogement(){
                     </div>
                 </div>
             </div>
-            }
+           }
             <Footer />
         </div>
     )
