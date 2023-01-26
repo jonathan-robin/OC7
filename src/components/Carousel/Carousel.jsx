@@ -35,7 +35,7 @@ export default function Carousel({ pictures }){
 
     return (
             <div className="container__carousel">
-                <div class="lds-dual-ring"></div>
+                <div className="lds-dual-ring"></div>
                 {pictures && pictures.map((picture, index) => { 
                     return <img src={picture} onLoad={pictureLoaded} className="container__picture" key={index} alt=""/>
                 })}

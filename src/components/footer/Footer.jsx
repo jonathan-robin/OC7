@@ -2,7 +2,6 @@
 import './Footer.css';
 
 export default function Footer(props){ 
-
     return (
         <div className="container__footer">
             <div className="container__footer-logo">
