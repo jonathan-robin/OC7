@@ -6,7 +6,7 @@ import './HeaderLogement.css';
 export default function HeaderLogement(props){ 
 
     return(
-         <div className="container__header">
+        <div className="container__header">
             <div className="container__header-firstLine">
                 <div className="left">
                     <h2>{props.title}</h2>
@@ -43,5 +43,4 @@ export default function HeaderLogement(props){
             </div>
         </div>
     )
-    
 }
