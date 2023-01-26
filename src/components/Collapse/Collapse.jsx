@@ -10,14 +10,9 @@ export default function Collapse(props){
     // each time collapse value change, display or hide description div
     useEffect(() => { 
         document.getElementById(props.id).style.display = collapse ? "block" : "none"; 
-        switchDescription();
-    }, [collapse])
-
-    // switch arrow direction
-    function switchDescription(){ 
         document.getElementById("arrow__collapse"+props.id).style.transform = collapse ? "rotate(0deg)" : "rotate(-180deg)"; 
         document.getElementById("arrow__collapse"+props.id).style.padding = collapse ? "5px 0 0 0" : "0 0 8px 0"; 
-    }
+    }, [collapse, props.id])
 
     return (
         <div className="container__collapse">

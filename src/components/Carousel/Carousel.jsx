@@ -1,6 +1,6 @@
 
 import './Carousel.css';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 
 // Function for the About page that displays title + description
 export default function Carousel({ pictures }){ 
@@ -15,7 +15,7 @@ export default function Carousel({ pictures }){
             document.querySelector(".lds-dual-ring").style.display = 'none';
             [].slice.call(document.getElementsByClassName('container__picture')).forEach(el => el.style.display = 'block');
         }
-    },[nbPictureLoaded, maxSlide])
+    },[nbPictureLoaded, maxSlide, pictures.length])
 
     function handleClickNext(){ 
         if (curSlide === maxSlide) curSlide = 0;
