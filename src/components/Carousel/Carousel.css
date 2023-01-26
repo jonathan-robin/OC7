@@ -1,13 +1,13 @@
 
 /* main container for carousel */
 .container__carousel{ height: 415px; overflow: hidden !important; display: flex; flex-direction: row; position: relative; border-radius: 25px; }
-.container__picture { width: 100%; height: 100%; transition: all 0.5s; position: absolute; object-fit: cover; border-radius: var(--border-rounded); display:none}
+.container__pictures{display : none;}
+.container__picture { width: 100%; height: 100%; transition: all 0.5s; position: absolute; object-fit: cover; border-radius: var(--border-rounded); }
 
 /* button for navigate through pictures */
 .btn { position: absolute; width: 40px; height: 40px; z-index: 10px; cursor: pointer; font-size: 60px; color: white; }
 .btn-prev {top: 35%;left: 5%;}
 .btn-next {top: 35%;right: 5%;}
-
 /* spinner */
 .lds-dual-ring { display: inline-block; width: 80px; left: 50%; top: 50%; position: absolute; height: 80px; }
 .lds-dual-ring:after { content: " "; display: block; width: 64px; height: 64px; margin: 8px; border-radius: 50%; 

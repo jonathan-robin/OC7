@@ -11,9 +11,9 @@ export default function Carousel({ pictures }){
     const [nbPictureLoaded, setNbPictureLoaded] = useState(0);
 
     useEffect(() => {
-        if (nbPictureLoaded === pictures.length && nbPictureLoaded > 0){ 
+        if (nbPictureLoaded === pictures.length + 1 && nbPictureLoaded > 0){ 
             document.querySelector(".lds-dual-ring").style.display = 'none';
-            [].slice.call(document.getElementsByClassName('container__picture')).reverse().forEach(el => el.style.display = 'block');
+            document.getElementsByClassName('container__pictures')[0].style.display = 'block';
         }
     },[nbPictureLoaded, maxSlide, pictures.length])
 
@@ -36,9 +36,11 @@ export default function Carousel({ pictures }){
     return (
             <div className="container__carousel">
                 <div className="lds-dual-ring"></div>
-                {pictures && pictures.map((picture, index) => { 
-                    return <img src={picture} onLoad={pictureLoaded} className="container__picture" key={index} alt=""/>
-                })}
+                <div className="container__pictures">
+                    {pictures && pictures.map((picture, index) => { 
+                        return <img src={picture} onLoad={pictureLoaded} className="container__picture" key={index} alt=""/>
+                    })}
+                </div>
                 {hasManyPictures &&            
                 <div> 
                     <div onClick={handleClickPrev} className="btn btn-prev">&#60;</div>
