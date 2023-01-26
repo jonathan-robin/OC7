@@ -8,13 +8,8 @@ export default function Carousel({ pictures, description }){
 
     let hasManyPictures = pictures.length > 1 ? true : false;
     let curSlide = 0;
-    const [count, setCount] = useState(0);
     let maxSlide = pictures.length - 1;
     const [nbPictureLoaded, setNbPictureLoaded] = useState(0);
-
-    useEffect(() => {
-        setCount(curSlide);
-    },[curSlide])
 
     function handleClickNext(){ 
         if (curSlide === maxSlide) curSlide = 0;
@@ -28,7 +23,6 @@ export default function Carousel({ pictures, description }){
         else curSlide--; 
         [].slice.call(document.getElementsByClassName("container__picture")).forEach((slide, indx) => slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`);
         [].slice.call(document.getElementsByClassName("number-images")).forEach((slide, indx) => slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`);
-
     }
 
     const pictureLoaded = () => {
