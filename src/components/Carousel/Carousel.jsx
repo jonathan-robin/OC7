@@ -7,15 +7,8 @@ export default function Carousel({ pictures }){
 
     let hasManyPictures = pictures.length > 1 ? true : false;
     let curSlide = 0;
-    let maxSlide = pictures.length - 1
+    let maxSlide = pictures.length - 1;
     const [nbPictureLoaded, setNbPictureLoaded] = useState(0);
-
-    useEffect(() => {
-        if (nbPictureLoaded === pictures.length + 1 && nbPictureLoaded > 0){ 
-            document.querySelector(".lds-dual-ring").style.display = 'none';
-            document.getElementsByClassName('container__pictures')[0].style.display = 'block';
-        }
-    },[nbPictureLoaded, maxSlide, pictures.length])
 
     function handleClickNext(){ 
         if (curSlide === maxSlide) curSlide = 0;
@@ -31,7 +24,16 @@ export default function Carousel({ pictures }){
         arr.reverse().forEach((slide, indx) => slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` );
     }
 
-    const pictureLoaded = () =>  setNbPictureLoaded(nbPictureLoaded+1);
+    const pictureLoaded = () => {
+        if (nbPictureLoaded === pictures.length - 1 || pictures.length === 1){ 
+            setTimeout(() => {
+                document.querySelector(".lds-dual-ring").style.display = 'none';
+                document.getElementsByClassName('container__pictures')[0].style.display = 'block';
+            },1000)
+        }
+        setNbPictureLoaded(nbPictureLoaded+1);
+    } 
+
 
     return (
             <div className="container__carousel">
