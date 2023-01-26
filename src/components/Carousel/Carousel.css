@@ -1,7 +1,6 @@
 
 /* main container for carousel */
 .container__carousel{ height: 415px; overflow: hidden !important; display: flex; flex-direction: row; position: relative; border-radius: 25px; }
-.container__pictures{display : none;}
 .container__picture { width: 100%; height: 100%; transition: all 0.5s; position: absolute; object-fit: cover; border-radius: var(--border-rounded); }
 
 /* button for navigate through pictures */

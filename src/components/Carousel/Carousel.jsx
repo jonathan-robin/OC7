@@ -1,9 +1,9 @@
 
 import './Carousel.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 // Function for the About page that displays title + description
-export default function Carousel({ pictures }){ 
+export default function Carousel({ pictures, description }){ 
 
     let hasManyPictures = pictures.length > 1 ? true : false;
     let curSlide = 0;
@@ -26,10 +26,7 @@ export default function Carousel({ pictures }){
 
     const pictureLoaded = () => {
         setNbPictureLoaded(nbPictureLoaded+1);
-        if (nbPictureLoaded === pictures.length - 1 && pictures.length > 0) { 
-            document.querySelector(".lds-dual-ring").style.display = 'none';
-            document.getElementsByClassName('container__pictures')[0].style.display = 'block';
-        }
+        if (nbPictureLoaded === pictures.length - 1 && pictures.length > 0) document.querySelector(".lds-dual-ring").style.display = 'none';
     } 
 
     return (
@@ -37,7 +34,7 @@ export default function Carousel({ pictures }){
                 <div className="lds-dual-ring"></div>
                 <div className="container__pictures">
                     {pictures && pictures.map((picture, index) => { 
-                        return <img src={picture} onLoad={pictureLoaded} style={{transform: 'translateX('+index*100+"%)"}} className="container__picture" key={index} alt=""/>
+                        return <img src={picture} onLoad={pictureLoaded} style={{transform: 'translateX('+index*100+"%)"}} className="container__picture" key={index} alt={"Photo n°"+index + 1+" du logement"+description}/>
                     })}
                 </div>
                 {hasManyPictures &&            

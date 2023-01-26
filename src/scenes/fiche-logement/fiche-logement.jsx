@@ -14,7 +14,8 @@ export default function FicheLogement(){
     const navigate = useNavigate();
     let id = location.pathname.split('/')[2];
     let pictures = jsonLogement.filter(logement => logement.id === id)[0]?.pictures; 
-    let logement = jsonLogement.filter(logement => logement.id === id)[0]
+    let description = jsonLogement.filter(logement => logement.id === id)[0]?.description; 
+    let logement = jsonLogement.filter(logement => logement.id === id)[0];
 
     useEffect(() => { 
         return () => logement ? {} :  navigate('/error');
@@ -25,7 +26,7 @@ export default function FicheLogement(){
             {logement &&
             <div className="container">
                 <Header />
-                <Carousel pictures={pictures} />
+                <Carousel pictures={pictures} description={logement.title}/>
                 <HeaderLogement author={logement.host} title={logement.title} rating={logement.rating} location={logement.location} tags={logement.tags}/>
                 <div className="container__collapses">
                     <div className="wrapper-collapse">
