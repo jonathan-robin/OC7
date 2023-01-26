@@ -26,7 +26,7 @@ export default function Carousel({ pictures, description }){
 
     const pictureLoaded = () => {
         setNbPictureLoaded(nbPictureLoaded+1);
-        if (nbPictureLoaded === pictures.length - 1 && pictures.length > 0) document.querySelector(".lds-dual-ring").style.display = 'none';
+        if (nbPictureLoaded === pictures.length && pictures.length > 0) document.querySelector(".lds-dual-ring").style.display = 'none';
     } 
 
     return (
