@@ -1,7 +1,6 @@
 
 import './Carousel.css';
 import React, { useState } from 'react';
-import { useEffect } from 'react';
 
 // Function for the About page that displays title + description
 export default function Carousel({ pictures, description }){ 
