@@ -14,7 +14,6 @@ export default function FicheLogement(){
     const navigate = useNavigate();
     let id = location.pathname.split('/')[2];
     let pictures = jsonLogement.filter(logement => logement.id === id)[0]?.pictures; 
-    let description = jsonLogement.filter(logement => logement.id === id)[0]?.description; 
     let logement = jsonLogement.filter(logement => logement.id === id)[0];
 
     useEffect(() => { 
