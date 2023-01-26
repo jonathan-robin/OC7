@@ -1,34 +1,14 @@
 
-.header__container{
-    display: flex;
-    flex-direction: row;
-    padding: 2rem 0;
-    max-width: 1240px;
-}
-.container__logo{ width: 80%;}
-.container__nav{ width: 20%;}
-.nav--list{ 
-    justify-content: space-between;
-    list-style: none; 
-    display: flex;
-    flex-direction: row;
-    padding: 0 !important;
-    color: var(--color-primary);
-    font-weight: 600;
-}
-a{ 
-    text-decoration :none ;
-    color: var(--color-primary);
-    text-decoration: none;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    min-width: 124px;
-}
+a{ text-decoration :none ; color: var(--color-primary); text-decoration: none; font-family: 'Montserrat'; font-style: normal; font-weight: 500; font-size: 24px; min-width: 124px; }
 a:hover, .active{ text-decoration: underline; }
-.container__logo{display: flex; flex-direction: row; }
+
+.header__container{ display: flex; flex-direction: row; padding: 2rem 0; max-width: 1240px; }
+
+.container__logo{display: flex; flex-direction: row; width: 80%;}
 .container__logo svg.fix-svg{ margin: 15px 0 0 12px;}
+.container__nav{ width: 20%;}
+
+.nav--list{  justify-content: space-between; list-style: none; display: flex;  flex-direction: row; padding: 0 !important; color: var(--color-primary); font-weight: 600; }
 
 @media only screen and (max-width: 1420px) {
     .container__nav{ width:fit-content;}
@@ -41,6 +21,4 @@ a:hover, .active{ text-decoration: underline; }
     .container__logo svg{ width: 40px; margin-top: 5px;}
     .container__logo .fix-svg{width: 35px;}
     .header__container{ padding: 28px 0 18px 0;}
-
-
 }

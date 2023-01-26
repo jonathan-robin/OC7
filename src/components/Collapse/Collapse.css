@@ -1,49 +1,20 @@
-.description__collapse{ display: none; }
 
-.container__collapse{ 
-    padding-top: 31px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 142.6%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
+/*  main container for globals collapses comp + each collapse */
+.container__collapse{ padding-top: 31px; color: white; font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 24px; line-height: 142.6%; display: flex; flex-direction: column; width: 100%; }
 .container__collapses .container__collapse{ padding-top: 24px !important; }
 .container__collapses .main__collapse{ padding: 13px;}
-.container__collapses .title__collapse{ font-family: 'Montserrat'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 142.6%; display: flex; align-items: center; color: #FFFFFF; }
-.container__collapses .arrow__collapse{ padding: 0 !important; height: 26px;}
-.main__collapse{ background-color: var(--color-primary); padding: 6.5px; max-height: 47px; border-radius: 5px; display: flex; cursor:pointer; }
 
-.title__collapse{ 
-    width: 12%;
-    position:relative;
-    padding-left: 2%;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 142.6%;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-}
+/* details within the collapse component */
+.main__collapse{ background-color: var(--color-primary); padding: 6.5px; max-height: 47px; border-radius: 5px; display: flex; cursor:pointer; }
+.container__collapses .arrow__collapse{ padding: 0 !important; height: 26px;}
+.title__collapse{ width: 12%; position:relative; padding-left: 2%; font-family: 'Montserrat'; font-style: normal; font-weight: 500; font-size: 24px; line-height: 142.6%; display: flex; align-items: center; color: #FFFFFF; }
+.description__collapse{ background: #F7F7F7; border-radius: 5px; width: 100%; margin: auto; font-family: 'Montserrat', sans-serif; font-weight: 400; }
+.description__collapse-text{ color: var(--color-primary); font-weight: 400; font-size: 24px; line-height: 142.6%; margin: 22px; }
+.arrow__collapse{  left: 80%; position: relative; padding-bottom: 8px; transform: rotate(-180deg); }
 
 p{ margin: 0;}
-.arrow__collapse{  left: 80%; position: relative; padding-bottom: 8px; transform: rotate(-180deg); }
-.description__collapse{ background: #F7F7F7; border-radius: 5px; width: 100%; margin: auto; font-family: 'Montserrat', sans-serif; font-weight: 400; }
-.description__collapse-text{ 
-    color: var(--color-primary);
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 142.6%;
-    margin: 22px;
-}
 .css-fix { white-space: pre-wrap;  }
-
+/* responsivness for mobile */
 @media only screen and (max-width: 738px) {
     .title__collapse{ font-size: 13px !important;line-height: 142.6%;}
     .description__collapse-text{ font-weight: 400;font-size: 12px !important;line-height: 142.6%;}

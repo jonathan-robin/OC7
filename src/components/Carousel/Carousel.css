@@ -1,69 +1,33 @@
 
-.container__carousel{ 
-    height: 415px;
-    overflow: hidden !important;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    border-radius: 25px;
+/* main container for carousel */
+.container__carousel{ height: 415px; overflow: hidden !important; display: flex; flex-direction: row; position: relative; border-radius: 25px; }
+.container__picture { width: 100%; height: 100%; transition: all 0.5s; position: absolute; object-fit: cover; border-radius: var(--border-rounded); display:none}
+
+/* button for navigate through pictures */
+.btn { position: absolute; width: 40px; height: 40px; z-index: 10px; cursor: pointer; font-size: 60px; color: white; }
+.btn-prev {top: 35%;left: 5%;}
+.btn-next {top: 35%;right: 5%;}
+
+/* spinner */
+.lds-dual-ring { display: inline-block; width: 80px; left: 50%; top: 50%; position: absolute; height: 80px; }
+.lds-dual-ring:after { content: " "; display: block; width: 64px; height: 64px; margin: 8px; border-radius: 50%; 
+  border: 6px solid var(--color-primary); 
+  border-color: var(--color-primary)transparent var(--color-primary) transparent; 
+  animation: lds-dual-ring 1.2s linear infinite;
 }
 
-  .container__picture {
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s;
-    position: absolute;
-    object-fit: cover;
-    border-radius: var(--border-rounded);
-  }
-
-  .btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    z-index: 10px;
-    cursor: pointer;
-    font-size: 60px;
-    color: white;
-  }
-  .container__picture{ display:none}
-  .btn-prev {top: 35%;left: 5%;}
-  .btn-next {top: 35%;right: 5%;}
-
-  .lds-dual-ring {
-    display: inline-block;
-    width: 80px;
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    height: 80px;
-  }
-  .lds-dual-ring:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid var(--color-primary);
-    border-color: var(--color-primary)transparent var(--color-primary) transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-  }
-
-  @keyframes lds-dual-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+/* animation for spinner */
+@keyframes lds-dual-ring {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
   
-  @media only screen and (max-width: 738px) {
-    .lds-dual-ring { left: 40%; top: 30%;} 
-     .container__carousel{ height: 255px;}
-     .container__picture, .container__carousel{ border-radius: var(--border-rounded-m);}
-     .btn{font-size: 30px; width: 0; height: 0;}
-     .btn-prev { top: 40%; left: 3%; }
-      .btn-next { top: 40%; right: 8%; }
-  }
+/* responsive for mobile */
+@media only screen and (max-width: 738px) {
+  .container__carousel{ height: 255px;}
+  .container__picture, .container__carousel{ border-radius: var(--border-rounded-m);}
+  .btn{font-size: 30px; width: 0; height: 0;}
+  .btn-prev { top: 40%; left: 3%; }
+  .btn-next { top: 40%; right: 8%; }
+  .lds-dual-ring { left: 40%; top: 30%;} 
+}

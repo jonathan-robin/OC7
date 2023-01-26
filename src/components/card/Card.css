@@ -1,30 +1,9 @@
-.container__card{ 
-    max-width: 340px;
-    padding-top: 56px;
-    cursor:pointer;
-}
-.container__card-image{ 
-    cursor:pointer;
-    background-size: cover !important;
-    width: 340px;
-    height: 340px;
-    border-radius:var(--border-rounded-m);
-}
+/* main container for each cards */
+.container__card{ max-width: 340px; padding-top: 56px; cursor:pointer; } 
+.container__card-title{ position: absolute; padding: 0 2em; font-family: 'Montserrat'; font-style: normal; font-size: 18px; font-weight: 500; color: #FFFFFF; width: 200px; height: 310px; align-items: flex-end; display: flex; }
+.container__card-image{ cursor:pointer; background-size: cover !important; width: 340px; height: 340px; border-radius:var(--border-rounded-m); }
 
-.container__card-title{
-    position: absolute;
-    padding: 0 2em;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-size: 18px;
-    font-weight: 500;
-    color: #FFFFFF;
-    width: 200px;
-    height: 310px;
-    align-items: flex-end;
-    display: flex;
-}
-
+/* container for mobile */
 @media only screen and (max-width: 738px) {
     .container__card{ padding-top: 22px; min-width: 335px;min-height: 255px;max-width: 100%; }
     .container__card-image{ min-width: 335px; width: 100%; padding-top: 0; }
