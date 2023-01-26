@@ -49,7 +49,7 @@
     border-color: var(--color-primary)transparent var(--color-primary) transparent;
     animation: lds-dual-ring 1.2s linear infinite;
   }
-  
+
   @keyframes lds-dual-ring {
     0% {
       transform: rotate(0deg);
@@ -60,6 +60,7 @@
   }
   
   @media only screen and (max-width: 738px) {
+    .lds-dual-ring { left: 40%; top: 30%;} 
      .container__carousel{ height: 255px;}
      .container__picture, .container__carousel{ border-radius: var(--border-rounded-m);}
      .btn{font-size: 30px; width: 0; height: 0;}
