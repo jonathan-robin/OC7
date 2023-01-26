@@ -17,7 +17,7 @@ export default function FicheLogement(){
     let logement = jsonLogement.filter(logement => logement.id === id)[0]
 
     useEffect(() => { 
-        return () => logement ? pictures.reverse() : navigate('/error');
+        return () => logement ? {} :  navigate('/error');
     },[logement, navigate])
 
     return (

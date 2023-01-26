@@ -14,33 +14,30 @@ export default function Carousel({ pictures }){
         if (curSlide === maxSlide) curSlide = 0;
         else curSlide++; 
         var arr = [].slice.call(document.getElementsByClassName("container__picture"));
-        arr.reverse().forEach((slide, indx) => slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` );
+        arr.forEach((slide, indx) => slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` );
     }
 
     function handleClickPrev(){ 
         if (curSlide === 0) curSlide = maxSlide;
         else curSlide--; 
-        var arr = [].slice.call(document.getElementsByClassName("container__picture"));
-        arr.reverse().forEach((slide, indx) => slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` );
+        var arrPrev = [].slice.call(document.getElementsByClassName("container__picture"));
+        arrPrev.forEach((slide, indx) => slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`);
     }
 
     const pictureLoaded = () => {
-        if (nbPictureLoaded === pictures.length - 1 || pictures.length === 1){ 
-            setTimeout(() => {
-                document.querySelector(".lds-dual-ring").style.display = 'none';
-                document.getElementsByClassName('container__pictures')[0].style.display = 'block';
-            },1000)
-        }
         setNbPictureLoaded(nbPictureLoaded+1);
+        if (nbPictureLoaded === pictures.length - 1 && pictures.length > 0) { 
+            document.querySelector(".lds-dual-ring").style.display = 'none';
+            document.getElementsByClassName('container__pictures')[0].style.display = 'block';
+        }
     } 
-
 
     return (
             <div className="container__carousel">
                 <div className="lds-dual-ring"></div>
                 <div className="container__pictures">
                     {pictures && pictures.map((picture, index) => { 
-                        return <img src={picture} onLoad={pictureLoaded} className="container__picture" key={index} alt=""/>
+                        return <img src={picture} onLoad={pictureLoaded} style={{transform: 'translateX('+index*100+"%)"}} className="container__picture" key={index} alt=""/>
                     })}
                 </div>
                 {hasManyPictures &&            
