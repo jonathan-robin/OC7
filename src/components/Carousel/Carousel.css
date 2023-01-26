@@ -2,7 +2,6 @@
 .container__carousel{ 
     height: 415px;
     overflow: hidden !important;
-    width: 100%;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -14,9 +13,7 @@
     height: 100%;
     transition: all 0.5s;
     position: absolute;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
+    object-fit: cover;
     border-radius: var(--border-rounded);
   }
 
@@ -29,7 +26,7 @@
     font-size: 60px;
     color: white;
   }
-  
+  .container__picture{ display:none}
   .btn-prev {top: 35%;left: 5%;}
   .btn-next {top: 35%;right: 5%;}
 

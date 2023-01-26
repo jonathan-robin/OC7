@@ -9,7 +9,7 @@ import router from './routes/routes';
   root.render(
     <React.StrictMode>
       <RouterProvider router={router} />
-    </React.StrictMode>
+    </React.StrictMode> 
   );
 
 // If you want to start measuring performance in your app, pass a function

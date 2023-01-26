@@ -31,6 +31,7 @@
     min-height: 64px;
     min-width: 64px;
     background-position: center !important;
+    background-size: cover;
     border-radius:50%;
 }
 
@@ -61,7 +62,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    min-width: 100px;
+    min-width: fit-content;
     padding: 0 7.5px;
     height: 25px;
 }
