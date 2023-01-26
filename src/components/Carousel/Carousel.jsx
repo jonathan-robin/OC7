@@ -12,6 +12,7 @@ export default function Carousel({pictures, logement, carouselLoading = () => {}
 
     useEffect(() => {
         if ((nbPictureLoaded === pictures.length) && nbPictureLoaded > 0){ 
+            document.querySelector(".lds-dual-ring").style.display = 'none';
             [].slice.call(document.getElementsByClassName('container__picture')).forEach(el => el.style.display = 'block');
         }
     },[nbPictureLoaded, maxSlide])
@@ -40,6 +41,7 @@ export default function Carousel({pictures, logement, carouselLoading = () => {}
 
     return (
             <div className="container__carousel">
+                <div class="lds-dual-ring"></div>
                 {pictures && pictures.map((picture, index) => { 
                     return <img src={picture} onLoad={pictureLoaded} className="container__picture" key={index} alt=""/>
                 })}
