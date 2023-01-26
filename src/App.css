@@ -1,19 +1,11 @@
 :root { 
   --bg-linear: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
   --color-primary: #FF6060;
-
   --border-rounded: 25px;
   --border-rounded-m : 10px;
 }
 
-.container{
-    max-width: 1240px;
-    margin: auto;
-    min-height: 100vh;
-}
-
-
-/* breakpiont 1420px */
+.container{ max-width: 1240px; margin: auto; min-height: 100vh; }
 
 @media only screen and (max-width: 1420px) {
     .container{ width: 80%; }
